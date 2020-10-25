@@ -9,11 +9,11 @@
         <h1 style="text-align: center; text-transform: uppercase; border-bottom: 1px solid red">Formulario.</h1>
         <h:form>
             <h:outputLabel>Nombre: </h:outputLabel>
-            <h:inputText></h:inputText>
+            <h:inputText value="#{indexController.nombre}"></h:inputText>
             <h:outputLabel>Apellido: </h:outputLabel>
-            <h:inputText></h:inputText>
+            <h:inputText value="#{indexController.apellido}"></h:inputText>
             <h:outputLabel>Cedula: </h:outputLabel>
-            <h:inputText></h:inputText>
+            <h:inputText value="#{indexController.cedula}"></h:inputText>
             <h:outputLabel>Fecha de nacimiento: </h:outputLabel>
             <h:inputText></h:inputText>
             <h:outputLabel>Dias trabajados: </h:outputLabel>
@@ -22,7 +22,7 @@
             <h:selectOneMenu></h:selectOneMenu>
             <h:outputLabel>Idiomas: </h:outputLabel>
             <h:selectManyMenu></h:selectManyMenu>
-            <h:commandButton actionListener=""
+            <h:commandButton actionListener="#{indexController.click()}"/>
             
         </h:form>
     </h:body>

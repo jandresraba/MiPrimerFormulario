@@ -23,11 +23,35 @@ private String Cedula;
      * Creates a new instance of IndexController
      */
     public void click(){
-        System.out.println("Nombre :"  +this.Nombre );
+        System.out.println("Nombre :"  +Nombre );
         System.out.println("Apellido : " +this.Apellido);
         System.out.println("Cedula : " +this.Cedula);
     }
     public IndexController() {
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getApellido() {
+        return Apellido;
+    }
+
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
+    }
+
+    public String getCedula() {
+        return Cedula;
+    }
+
+    public void setCedula(String Cedula) {
+        this.Cedula = Cedula;
     }
     
 }
