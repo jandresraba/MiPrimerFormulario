@@ -6,19 +6,27 @@
 package com.mycompany.miprimerformulario;
 
 import javax.inject.Named;
-import javax.enterprise.context.Dependent;
+import javax.enterprise.context.RequestScoped;
 
 /**
  *
- * @author Johan
+ * @author usuario
  */
 @Named(value = "indexController")
-@Dependent
+@RequestScoped
 public class IndexController {
-
+    
+private String Nombre;
+private String Apellido;
+private String Cedula;
     /**
      * Creates a new instance of IndexController
      */
+    public void click(){
+        System.out.println("Nombre :"  +this.Nombre );
+        System.out.println("Apellido : " +this.Apellido);
+        System.out.println("Cedula : " +this.Cedula);
+    }
     public IndexController() {
     }
     
