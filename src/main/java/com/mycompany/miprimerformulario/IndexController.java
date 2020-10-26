@@ -42,6 +42,7 @@ private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
         System.out.println("Cedula : " +this.cedula);
         System.out.println("Días trabajados: "+this.diasTrabajados);
         System.out.println("Nivel estudio: "+this.nivelEstudio);
+        System.out.println("Idiomas: "+this.listaIdiomas);
     }
 
     public String getNombre() {
