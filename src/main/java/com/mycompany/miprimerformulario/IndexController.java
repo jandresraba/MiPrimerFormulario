@@ -21,6 +21,7 @@ private String Apellido;
 private String Cedula;
 private String Dias_trabajados;
 private String Nivel_Estudio;
+private String Idiomas;
     /**
      * Creates a new instance of IndexController
      */
@@ -30,6 +31,7 @@ private String Nivel_Estudio;
         System.out.println("Cedula : " +this.Cedula);
         System.out.println("Días trabajados: "+this.Dias_trabajados);
         System.out.println("Nivel estudio: "+this.Nivel_Estudio);
+        System.out.println("Idiomas :"+this.Idiomas);
     }
     public IndexController() {
     }
@@ -72,6 +74,14 @@ private String Nivel_Estudio;
 
     public void setNivel_Estudio(String Nivel_Estudio) {
         this.Nivel_Estudio = Nivel_Estudio;
+    }
+
+    public String getIdiomas() {
+        return Idiomas;
+    }
+
+    public void setIdiomas(String Idiomas) {
+        this.Idiomas = Idiomas;
     }
     
 }

@@ -31,7 +31,13 @@
                 <f:selectItem itemValue="Magister" itemLabel="Magister"/>
             </h:selectOneMenu>
             <h:outputLabel>Idiomas: </h:outputLabel>
-            <h:selectManyMenu></h:selectManyMenu>
+            <h:selectManyCheckbox value="#{indexController.idiomas}">
+                <f:selectItem itemLabel="Ingles" itemValue="Ingles"/>
+                <f:selectItem itemLabel="Frances" itemValue="Frances"/>
+                <f:selectItem itemLabel="Chino" itemValue="Chino"/>
+                <f:selectItem itemLabel="Portugues" itemValue="Portuges"/>
+                <f:selectItem itemLabel="Ruso" itemValue="Ruso"/>
+            </h:selectManyCheckbox>
             <br>
             <h:commandButton actionListener="#{indexController.click()}" value="Calcular"/>
             </br>
