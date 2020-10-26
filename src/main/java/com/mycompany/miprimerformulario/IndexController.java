@@ -5,6 +5,8 @@
  */
 package com.mycompany.miprimerformulario;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
@@ -16,83 +18,87 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class IndexController {
     
-private String Nombre;
-private String Apellido;
-private String Cedula;
-private String Dias_trabajados;
-private String Nivel_Estudio;
-private String Idiomas []; 
+private String nombre;
+private String apellido;
+private String cedula;
+private String nivelEstudio;
+private String diasTrabajados;
+private List<String> idiomasSeleccionados;//Lista para almacenar elementos seleccionados.
+private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
 
     /**
      * Creates a new instance of IndexController
      */
     public IndexController() {
-        this.Idiomas = new String [5];
+        idiomasSeleccionados = new ArrayList<String>();
+        idiomasSeleccionados.add("Ingles"); 
+        idiomasSeleccionados.add("Frances");
+        idiomasSeleccionados.add("Chino"); 
     }     
 
     public void click(){
-        System.out.println("Nombre :"  +Nombre );
-        System.out.println("Apellido : " +this.Apellido);
-        System.out.println("Cedula : " +this.Cedula);
-        System.out.println("Días trabajados: "+this.Dias_trabajados);
-        System.out.println("Nivel estudio: "+this.Nivel_Estudio);
-        Idiomas = new String [5];
-        Idiomas[0]="Ingles";
-        Idiomas[1]="Frances";
-        Idiomas[2]="Chino";
-        Idiomas[3]="Portugues";
-        Idiomas[4]="Ruso";
+        System.out.println("Nombre :"  +nombre );
+        System.out.println("Apellido : " +this.apellido);
+        System.out.println("Cedula : " +this.cedula);
+        System.out.println("Días trabajados: "+this.diasTrabajados);
+        System.out.println("Nivel estudio: "+this.nivelEstudio);
     }
-    
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
 
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getCedula() {
-        return Cedula;
+        return cedula;
     }
 
-    public void setCedula(String Cedula) {
-        this.Cedula = Cedula;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
-    public String getDias_trabajados() {
-        return Dias_trabajados;
+    public String getNivelEstudio() {
+        return nivelEstudio;
     }
 
-    public void setDias_trabajados(String Dias_trabajados) {
-        this.Dias_trabajados = Dias_trabajados;
+    public void setNivelEstudio(String nivelEstudio) {
+        this.nivelEstudio = nivelEstudio;
     }
 
-    public String getNivel_Estudio() {
-        return Nivel_Estudio;
+    public String getDiasTrabajados() {
+        return diasTrabajados;
     }
 
-    public void setNivel_Estudio(String Nivel_Estudio) {
-        this.Nivel_Estudio = Nivel_Estudio;
+    public void setDiasTrabajados(String diasTrabajados) {
+        this.diasTrabajados = diasTrabajados;
     }
 
-    public String[] getIdiomas() {
-        return Idiomas;
+    public List<String> getIdiomasSeleccionados() {
+        return idiomasSeleccionados;
     }
 
-    public void setIdiomas(String[] Idiomas) {
-        this.Idiomas = Idiomas;
+    public void setIdiomasSeleccionados(List<String> idiomasSeleccionados) {
+        this.idiomasSeleccionados = idiomasSeleccionados;
     }
 
-   
+    public List<String> getListaIdiomas() {
+        return listaIdiomas;
+    }
+
+    public void setListaIdiomas(List<String> listaIdiomas) {
+        this.listaIdiomas = listaIdiomas;
+    }
+    
     
 }

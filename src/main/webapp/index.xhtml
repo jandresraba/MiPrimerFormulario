@@ -18,24 +18,20 @@
             <h:inputText value="#{indexController.cedula}"></h:inputText>
             
             <h:outputLabel value="Dias Trabajados: " style="margin-left: 20px; "/>
-            <h:inputText value="#{indexController.dias_trabajados}"/>
+            <h:inputText value="#{indexController.diasTrabajados}"/>
             <h:outputLabel value="Nivel de estdio: " style="margin-left: 20px; "/>
-            <h:selectOneMenu value="#{indexController.nivel_Estudio}">
-                <f:selectItem itemValue="Seleccionar" itemLabel="Seleccionar"/>
-                <f:selectItem itemValue="Primaria" itemLabel="Primaria"/>
-                <f:selectItem itemValue="Secundaria" itemLabel="Secundaria"/>
-                <f:selectItem itemValue="Tecnico" itemLabel="Tecnico"/>
-                <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
-                <f:selectItem itemValue="Profesional" itemLabel="Profesional"/>
-                <f:selectItem itemValue="Magister" itemLabel="Magister"/>
-            </h:selectOneMenu>
-            <h:outputLabel>Idiomas: </h:outputLabel>
-            <h:selectManyCheckbox value="#{indexController.idiomas}">
-                <f:selectItem itemLabel="Ingles" itemValue="1"></f:selectItem>
-                <f:selectItem itemLabel="Frances" itemValue="2"></f:selectItem>
-                <f:selectItem itemLabel="Chino" itemValue="3"></f:selectItem>
-                <f:selectItem itemLabel="Portugues" itemValue="4"></f:selectItem>
-                <f:selectItem itemLabel="Ruso" itemValue="5"></f:selectItem>
+            <h:selectOneMenu value="#{indexController.nivelEstudio}">
+                    <f:selectItem itemValue="Primaria" itemLabel="Primaria"/>
+                    <f:selectItem itemValue="Secundaria" itemLabel="Secundaria"/>
+                    <f:selectItem itemValue="Tecnico" itemLabel="Tecnico"/>
+                    <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
+                    <f:selectItem itemValue="Profesional" itemLabel="Profesional"/>
+                    <f:selectItem itemValue="Magister" itemLabel="Magister"/>
+                </h:selectOneMenu>
+ 
+            <h:outputLabel value="Idiomas " style="margin-left: 20px;"/>
+            <h:selectManyCheckbox value="#{indexController.listaIdiomas}" layout="pageDirection">
+                <f:selectItems value="#{indexController.idiomasSeleccionados}"/>
             </h:selectManyCheckbox>
             <br>
             <h:commandButton actionListener="#{indexController.click()}" value="Calcular"/>
