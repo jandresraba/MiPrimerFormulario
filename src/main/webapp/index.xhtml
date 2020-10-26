@@ -10,17 +10,16 @@
     <h:body>
         <h1 style="text-align: center; text-transform: uppercase; border-bottom: 1px solid red">Formulario.</h1>
         <h:form>
-            <h:outputLabel>Nombre: </h:outputLabel>
+            <h:outputLabel value="Nombre: " style="margin-left: 20px; "/>
             <h:inputText value="#{indexController.nombre}"></h:inputText>
-            <h:outputLabel>Apellido: </h:outputLabel>
+            <h:outputLabel value="Apellido: " style="margin-left: 20px; "/>
             <h:inputText value="#{indexController.apellido}"></h:inputText>
-            <h:outputLabel>Cedula: </h:outputLabel>
+            <h:outputLabel value="Cedula:" style="margin-left: 20px; "/>
             <h:inputText value="#{indexController.cedula}"></h:inputText>
-            <h:outputLabel>Fecha de nacimiento: </h:outputLabel>
-            <h:inputText></h:inputText>
-            <h:outputLabel>Dias trabajados: </h:outputLabel>
-            <h:inputText value="#{indexController.dias_trabajados}"></h:inputText>
-            <h:outputLabel>Nivel de estudio </h:outputLabel>
+            
+            <h:outputLabel value="Dias Trabajados: " style="margin-left: 20px; "/>
+            <h:inputText value="#{indexController.dias_trabajados}"/>
+            <h:outputLabel value="Nivel de estdio: " style="margin-left: 20px; "/>
             <h:selectOneMenu value="#{indexController.nivel_Estudio}">
                 <f:selectItem itemValue="Seleccionar" itemLabel="Seleccionar"/>
                 <f:selectItem itemValue="Primaria" itemLabel="Primaria"/>
