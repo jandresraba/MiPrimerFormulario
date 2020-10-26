@@ -20,6 +20,7 @@ private String Nombre;
 private String Apellido;
 private String Cedula;
 private String Dias_trabajados;
+private String Nivel_Estudio;
     /**
      * Creates a new instance of IndexController
      */
@@ -28,6 +29,7 @@ private String Dias_trabajados;
         System.out.println("Apellido : " +this.Apellido);
         System.out.println("Cedula : " +this.Cedula);
         System.out.println("Días trabajados: "+this.Dias_trabajados);
+        System.out.println("Nivel estudio: "+this.Nivel_Estudio);
     }
     public IndexController() {
     }
@@ -62,6 +64,14 @@ private String Dias_trabajados;
 
     public void setDias_trabajados(String Dias_trabajados) {
         this.Dias_trabajados = Dias_trabajados;
+    }
+
+    public String getNivel_Estudio() {
+        return Nivel_Estudio;
+    }
+
+    public void setNivel_Estudio(String Nivel_Estudio) {
+        this.Nivel_Estudio = Nivel_Estudio;
     }
     
 }
