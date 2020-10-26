@@ -36,12 +36,12 @@ private String Idiomas [];
         System.out.println("Cedula : " +this.Cedula);
         System.out.println("Días trabajados: "+this.Dias_trabajados);
         System.out.println("Nivel estudio: "+this.Nivel_Estudio);
-        for(int i = 0;i<=Idiomas.length; i++ ){
-            if(i==1){
-                System.out.println("Ingles");
-            }
-            //System.out.println(Idiomas[i]);
-        }
+        Idiomas = new String [5];
+        Idiomas[0]="Ingles";
+        Idiomas[1]="Frances";
+        Idiomas[2]="Chino";
+        Idiomas[3]="Portugues";
+        Idiomas[4]="Ruso";
     }
     
 
