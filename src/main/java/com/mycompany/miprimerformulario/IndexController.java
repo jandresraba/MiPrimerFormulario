@@ -21,20 +21,29 @@ private String Apellido;
 private String Cedula;
 private String Dias_trabajados;
 private String Nivel_Estudio;
-private String Idiomas;
+private String Idiomas []; 
+
     /**
      * Creates a new instance of IndexController
      */
+    public IndexController() {
+        this.Idiomas = new String [5];
+    }     
+
     public void click(){
         System.out.println("Nombre :"  +Nombre );
         System.out.println("Apellido : " +this.Apellido);
         System.out.println("Cedula : " +this.Cedula);
         System.out.println("Días trabajados: "+this.Dias_trabajados);
         System.out.println("Nivel estudio: "+this.Nivel_Estudio);
-        System.out.println("Idiomas :"+this.Idiomas);
+        for(int i = 0;i<=Idiomas.length; i++ ){
+            if(i==1){
+                System.out.println("Ingles");
+            }
+            //System.out.println(Idiomas[i]);
+        }
     }
-    public IndexController() {
-    }
+    
 
     public String getNombre() {
         return Nombre;
@@ -76,12 +85,14 @@ private String Idiomas;
         this.Nivel_Estudio = Nivel_Estudio;
     }
 
-    public String getIdiomas() {
+    public String[] getIdiomas() {
         return Idiomas;
     }
 
-    public void setIdiomas(String Idiomas) {
+    public void setIdiomas(String[] Idiomas) {
         this.Idiomas = Idiomas;
     }
+
+   
     
 }
