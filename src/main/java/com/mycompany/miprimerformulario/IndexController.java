@@ -47,6 +47,9 @@ private String sueldo;
         System.out.println("Sueldo: "+this.sueldo);
         System.out.println("El sueldo es: "+pago);
         
+        
+            //pago= listaIdiomas.size()*10000;
+        
         if(nivelEstudio.equals("Tecnico")){
             pago+=5000;
             System.out.println("El sueldo es: "+pago);
