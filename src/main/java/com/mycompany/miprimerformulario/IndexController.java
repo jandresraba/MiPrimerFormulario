@@ -38,6 +38,7 @@ private String sueldo;
     public void click(){
         int pago =Integer.parseInt(this.sueldo);
         int dias = Integer.parseInt(this.diasTrabajados);
+        pago=(pago*dias);
         System.out.println("Nombre :"  +nombre );
         System.out.println("Apellido : " +this.apellido);
         System.out.println("Cedula : " +this.cedula);
