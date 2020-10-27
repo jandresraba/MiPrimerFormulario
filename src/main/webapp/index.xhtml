@@ -61,7 +61,10 @@
                 <h:commandButton actionListener="#{indexController.click()}" value="Calcular" style="margin-top: 30px;" />
             </div>
         </h:form>
-        <h:outputLabel value="El valor que ganará es de: #{indexController.total}"/>
+        <fieldset>
+            <legend>Resultados</legend>
+            <h:outputLabel value="El valor que ganará es de: #{indexController.total}"/>
+        </fieldset>
     </h:body>
 </html>
 
