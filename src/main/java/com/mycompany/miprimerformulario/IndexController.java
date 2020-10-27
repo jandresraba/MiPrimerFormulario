@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Esta clase contiene toda la parte logica
  */
 package com.mycompany.miprimerformulario;
 
@@ -11,31 +9,54 @@ import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
 /**
- *
- * @author usuario
+ * @since 26/10/2020
+ *@author Johan Sanchez
+ * @author Fernando Arévalo
  */
 @Named(value = "indexController")
 @RequestScoped
 public class IndexController {
     
+ /**
+  * Se crea cada una de las variables las cuales contendran la información requerida
+  */
+    /**
+     * Se guarda el nombre del trabajador
+     */
 private String nombre;
+/**
+     * Se guarda el apellido del trabajador
+     */
 private String apellido;
+/**
+     * Se guarda el número de cedula del trabajador
+     */
 private String cedula;
+/**
+     * Se guarda el nivel de Estudios del trabajador
+     */
 private String nivelEstudio;
+/**
+     * Se guarda los días que trabajo 
+     */
 private String diasTrabajados;
 private int total;
 private List<String> idiomasSeleccionados;//Lista para almacenar elementos seleccionados.
 private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
 private String sueldo;
 
-   
+/**
+ * Se crea la clase Controller
+ */   
     public IndexController() {
         idiomasSeleccionados = new ArrayList<String>();
         idiomasSeleccionados.add("Ingles"); 
         idiomasSeleccionados.add("Frances");
         idiomasSeleccionados.add("Chino"); 
     }     
-
+    /**
+     * Se crea el metodo clic el cual cotiene, el sueldo, según su nivel de estudio
+     */
     public void click(){
         int pago =Integer.parseInt(this.sueldo);
         int dias = Integer.parseInt(this.diasTrabajados);
