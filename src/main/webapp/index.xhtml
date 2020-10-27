@@ -2,42 +2,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+        <style>
+            .boton{
+                text-align: center;
+            }
+            .nivel{
+                width: 50%;
+                float: left;
+            }
+        </style>
         <h1 style="text-align: center; text-transform: uppercase; border-bottom: 1px solid red">Formulario.</h1>
         <h:form>
-            <h:outputLabel value="Nombre: " style="margin-left: 20px; "/>
-            <h:inputText value="#{indexController.nombre}"></h:inputText>
-            <h:outputLabel value="Apellido: " style="margin-left: 20px; "/>
-            <h:inputText value="#{indexController.apellido}"></h:inputText>
-            <h:outputLabel value="Cedula:" style="margin-left: 20px; "/>
-            <h:inputText value="#{indexController.cedula}"></h:inputText>
-            
-            <h:outputLabel value="Dias Trabajados: " style="margin-left: 20px; "/>
-            <h:inputText value="#{indexController.diasTrabajados}"/>
-            <h:outputLabel value="Nivel de estdio: " style="margin-left: 20px; "/>
-            <h:selectOneMenu value="#{indexController.nivelEstudio}">
-                    <f:selectItem itemValue="Primaria" itemLabel="Primaria"/>
-                    <f:selectItem itemValue="Secundaria" itemLabel="Secundaria"/>
-                    <f:selectItem itemValue="Tecnico" itemLabel="Tecnico"/>
-                    <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
-                    <f:selectItem itemValue="Profesional" itemLabel="Profesional"/>
-                    <f:selectItem itemValue="Magister" itemLabel="Magister"/>
-                </h:selectOneMenu>
- 
-            <h:outputLabel value="Idiomas " style="margin-left: 20px;"/>
-            <h:selectManyCheckbox value="#{indexController.listaIdiomas}" layout="pageDirection">
-                <f:selectItems value="#{indexController.idiomasSeleccionados}"/>
-            </h:selectManyCheckbox>
-            <h:outputLabel value="Sueldo Base: " style="margin-left: 20px;"/>
-            <h:inputText value="#{indexController.sueldo}"/>
-            <br>
-            <h:commandButton actionListener="#{indexController.click()}" value="Calcular" style="margin-left: 20px;"/>
-            </br>
+            <fieldset>
+                <legend style="text-align: center;">Datos Personales</legend>
+                <h:outputLabel value="Nombre: " style="margin-left: 20px; "/>
+                <h:inputText value="#{indexController.nombre}"></h:inputText>
+                <h:outputLabel value="Apellido: " style="margin-left: 20px; "/>
+                <h:inputText value="#{indexController.apellido}"></h:inputText>
+                <h:outputLabel value="Cedula: " style="margin-left: 20px; "/>
+                <h:inputText value="#{indexController.cedula}"></h:inputText>
+            </fieldset>
+            <fieldset style="margin-top: 30px;">
+                <legend style="text-align: center;">Datos Laborales</legend>
+                <h:outputLabel value="Dias Trabajados: " style="margin-left: 20px; "/>
+                <h:inputText value="#{indexController.diasTrabajados}"/>
+                <h:outputLabel value="Sueldo Base: " style="margin-left: 20px;"/>
+                <h:inputText value="#{indexController.sueldo}"/>
+            </fieldset>
+            <fieldset style="margin-top: 30px;">
+                <legend style="text-align: center;">Otros Datos</legend>
+                <div class="nivel">
+                    <h:outputLabel value="Nivel de estdio: " style="margin-left: 20px; "/>
+                    <h:selectOneMenu value="#{indexController.nivelEstudio}">
+                        <f:selectItem itemValue="Primaria" itemLabel="Primaria"/>
+                        <f:selectItem itemValue="Secundaria" itemLabel="Secundaria"/>
+                        <f:selectItem itemValue="Tecnico" itemLabel="Tecnico"/>
+                        <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
+                        <f:selectItem itemValue="Profesional" itemLabel="Profesional"/>
+                        <f:selectItem itemValue="Magister" itemLabel="Magister"/>
+                    </h:selectOneMenu>
+                </div>
+
+                <div class="nivel">
+                    <h:outputLabel value="Idiomas " style="margin-left: 20px;"/>
+                    <h:selectManyCheckbox value="#{indexController.listaIdiomas}">
+                        <f:selectItems value="#{indexController.idiomasSeleccionados}"/>
+                    </h:selectManyCheckbox>
+                </div>
+
+            </fieldset>
+            <div class="boton">
+                
+                <h:commandButton actionListener="#{indexController.click()}" value="Calcular" style="margin-top: 30px;" />
+                <h:outputLabel value="#{i}"
+            </div>
         </h:form>
     </h:body>
 </html>

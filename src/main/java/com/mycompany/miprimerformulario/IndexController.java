@@ -23,6 +23,7 @@ private String apellido;
 private String cedula;
 private String nivelEstudio;
 private String diasTrabajados;
+private int total;
 private List<String> idiomasSeleccionados;//Lista para almacenar elementos seleccionados.
 private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
 private String sueldo;
@@ -38,32 +39,25 @@ private String sueldo;
     public void click(){
         int pago =Integer.parseInt(this.sueldo);
         int dias = Integer.parseInt(this.diasTrabajados);
-        System.out.println("Nombre :"  +nombre );
-        System.out.println("Apellido : " +this.apellido);
-        System.out.println("Cedula : " +this.cedula);
-        System.out.println("Días trabajados: "+this.diasTrabajados);
-        System.out.println("Nivel estudio: "+this.nivelEstudio);
-        System.out.println("Idiomas: "+this.listaIdiomas);
-        System.out.println("Sueldo: "+this.sueldo);
-        System.out.println("El sueldo es: "+pago);
-        
-        
-            //pago= listaIdiomas.size()*10000;
         
         if(nivelEstudio.equals("Tecnico")){
-            pago+=5000;
-            System.out.println("El sueldo es: "+pago);
+            total = (pago *dias)+(listaIdiomas.size()*10000)+5000;
+            System.out.println(total);
         }if(nivelEstudio.equals("Tecnologo")){
-            pago+=15000;
-            System.out.println("El sueldo es: "+pago);
+            total = (pago *dias)+(listaIdiomas.size()*10000)+15000;
+            System.out.println(total);
         }
         if(nivelEstudio.equals("Profesional")){
-            pago+=30000;
-            System.out.println("El sueldo es: "+pago);
+            total = (pago *dias)+(listaIdiomas.size()*10000)+30000;
+            System.out.println(total);
         }
         if(nivelEstudio.equals("Magister")){
-            pago+=40000;
-            System.out.println("El sueldo es: "+pago);
+            total = (pago *dias)+(listaIdiomas.size()*10000)+40000;
+            System.out.println(total);
+        }
+        if(nivelEstudio.equals("Primaria") || nivelEstudio.equals("Secundaria")){
+            total = (pago *dias)+(listaIdiomas.size()*10000);
+            System.out.println(total);
         }
     }
 
@@ -129,6 +123,14 @@ private String sueldo;
 
     public void setSueldo(String sueldo) {
         this.sueldo = sueldo;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
     
     
