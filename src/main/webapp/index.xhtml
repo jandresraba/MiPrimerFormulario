@@ -33,8 +33,10 @@
             <h:selectManyCheckbox value="#{indexController.listaIdiomas}" layout="pageDirection">
                 <f:selectItems value="#{indexController.idiomasSeleccionados}"/>
             </h:selectManyCheckbox>
+            <h:outputLabel value="Sueldo Base: " style="margin-left: 20px;"/>
+            <h:inputText value="#{indexController.sueldo}"/>
             <br>
-            <h:commandButton actionListener="#{indexController.click()}" value="Calcular"/>
+            <h:commandButton actionListener="#{indexController.click()}" value="Calcular" style="margin-left: 20px;"/>
             </br>
         </h:form>
     </h:body>

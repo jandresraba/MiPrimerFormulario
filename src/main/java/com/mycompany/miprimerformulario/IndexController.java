@@ -25,10 +25,9 @@ private String nivelEstudio;
 private String diasTrabajados;
 private List<String> idiomasSeleccionados;//Lista para almacenar elementos seleccionados.
 private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
+private String sueldo;
 
-    /**
-     * Creates a new instance of IndexController
-     */
+   
     public IndexController() {
         idiomasSeleccionados = new ArrayList<String>();
         idiomasSeleccionados.add("Ingles"); 
@@ -37,12 +36,32 @@ private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
     }     
 
     public void click(){
+        int pago =Integer.parseInt(this.sueldo);
+        int dias = Integer.parseInt(this.diasTrabajados);
         System.out.println("Nombre :"  +nombre );
         System.out.println("Apellido : " +this.apellido);
         System.out.println("Cedula : " +this.cedula);
         System.out.println("Días trabajados: "+this.diasTrabajados);
         System.out.println("Nivel estudio: "+this.nivelEstudio);
         System.out.println("Idiomas: "+this.listaIdiomas);
+        System.out.println("Sueldo: "+this.sueldo);
+        System.out.println("El sueldo es: "+pago);
+        
+        if(nivelEstudio.equals("Tecnico")){
+            pago+=5000;
+            System.out.println("El sueldo es: "+pago);
+        }if(nivelEstudio.equals("Tecnologo")){
+            pago+=15000;
+            System.out.println("El sueldo es: "+pago);
+        }
+        if(nivelEstudio.equals("Profesional")){
+            pago+=30000;
+            System.out.println("El sueldo es: "+pago);
+        }
+        if(nivelEstudio.equals("Magister")){
+            pago+=40000;
+            System.out.println("El sueldo es: "+pago);
+        }
     }
 
     public String getNombre() {
@@ -99,6 +118,14 @@ private List<String> listaIdiomas;//Lista para almacenar elementos seleccionados
 
     public void setListaIdiomas(List<String> listaIdiomas) {
         this.listaIdiomas = listaIdiomas;
+    }
+
+    public String getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(String sueldo) {
+        this.sueldo = sueldo;
     }
     
     
