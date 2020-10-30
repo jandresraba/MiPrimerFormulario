@@ -58,7 +58,7 @@
 
             </fieldset>
             <div class="boton">
-                
+
                 <h:commandButton actionListener="#{indexController.click()}" value="Calcular" style="margin-top: 30px;" />
             </div>
         </h:form>
@@ -70,13 +70,15 @@
             <h:outputLabel value="El valor que ganará es de: #{indexController.total}"/><br></br>
             <h:outputText value="Idiomas hablados: "/><br></br>
             <h:panelGroup>
-                    <ul>
-                        <ui:repeat var="profesion" value="#{indexController.listaIdiomas}">
+                <ul>
+                    <ui:repeat var="profesion" value="#{indexController.listaIdiomas}">
                         <li>#{profesion}</li>
-                        </ui:repeat>
-                    </ul>
-                </h:panelGroup>
+                    </ui:repeat>
+                </ul>
+            </h:panelGroup>
         </fieldset>
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
     </h:body>
 </html>
 
